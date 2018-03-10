@@ -5,8 +5,8 @@ module objects {
     // public properties
 
     // Constructor
-    constructor(assetManager: createjs.LoadQueue) {
-      super(assetManager, "island");
+    constructor() {
+      super("island");
       this.Start();
     }
 

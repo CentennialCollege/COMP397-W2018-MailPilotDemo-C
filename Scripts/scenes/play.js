@@ -23,15 +23,15 @@ var scenes;
         // Public Methods
         // Initialize Game Variables and objects
         PlayScene.prototype.Start = function () {
-            this._ocean = new objects.Ocean(this.assetManager);
-            this._plane = new objects.Plane(this.assetManager);
-            this._island = new objects.Island(this.assetManager);
+            this._ocean = new objects.Ocean();
+            this._plane = new objects.Plane();
+            this._island = new objects.Island();
             // instantiate the cloud array
             this._clouds = new Array();
             this._cloudNum = 3;
             // loop and add each cloud to the array
             for (var count = 0; count < this._cloudNum; count++) {
-                this._clouds[count] = new objects.Cloud(this.assetManager);
+                this._clouds[count] = new objects.Cloud();
             }
             this._engineSound = createjs.Sound.play("engine");
             this._engineSound.loop = -1; // play forever

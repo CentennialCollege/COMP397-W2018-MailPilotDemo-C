@@ -38,7 +38,7 @@ var scenes;
             this._engineSound.volume = 0.3;
             // create the scoreboard UI for the Scene
             this._scoreBoard = new managers.ScoreBoard();
-            objects.Game.scoreBoard = this._scoreBoard;
+            managers.Game.scoreBoard = this._scoreBoard;
             this.Main();
         };
         // triggered every frame
@@ -57,7 +57,7 @@ var scenes;
             // if lives fall below zero switch scenes to the game over scene
             if (this._scoreBoard.Lives <= 0) {
                 this._engineSound.stop();
-                objects.Game.currentScene = config.Scene.OVER;
+                managers.Game.currentScene = config.Scene.OVER;
             }
         };
         // This is where the fun happens

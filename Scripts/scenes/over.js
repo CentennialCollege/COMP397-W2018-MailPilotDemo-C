@@ -21,7 +21,7 @@ var scenes;
         }
         // Private Mathods
         OverScene.prototype._restartButtonClick = function () {
-            objects.Game.currentScene = config.Scene.PLAY;
+            managers.Game.currentScene = config.Scene.PLAY;
         };
         // Public Methods
         // Initialize Game Variables and objects
@@ -45,7 +45,7 @@ var scenes;
             this.addChild(this._restartButton);
             // add scoreboard to the scene
             this.addChild(this._scoreboard.HighScoreLabel);
-            this._scoreboard.HighScore = objects.Game.HighScore;
+            this._scoreboard.HighScore = managers.Game.HighScore;
             // event listeners
             this._restartButton.on("click", this._restartButtonClick);
         };

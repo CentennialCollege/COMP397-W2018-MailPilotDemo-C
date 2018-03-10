@@ -13,15 +13,15 @@ var managers;
                     switch (object2.name) {
                         case "island":
                             createjs.Sound.play("yay");
-                            objects.Game.scoreBoard.Score += 100;
-                            if (objects.Game.HighScore <= objects.Game.scoreBoard.Score) {
-                                objects.Game.scoreBoard.HighScore = objects.Game.scoreBoard.Score;
-                                objects.Game.HighScore = objects.Game.scoreBoard.HighScore;
+                            managers.Game.scoreBoard.Score += 100;
+                            if (managers.Game.HighScore <= managers.Game.scoreBoard.Score) {
+                                managers.Game.scoreBoard.HighScore = managers.Game.scoreBoard.Score;
+                                managers.Game.HighScore = managers.Game.scoreBoard.HighScore;
                             }
                             break;
                         case "cloud":
                             createjs.Sound.play("thunder");
-                            objects.Game.scoreBoard.Lives -= 1;
+                            managers.Game.scoreBoard.Lives -= 1;
                             break;
                     }
                 }

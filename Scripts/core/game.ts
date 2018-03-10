@@ -46,19 +46,19 @@
     createjs.Ticker.framerate = 60; // 60 FPS
     createjs.Ticker.on("tick", Update);
 
-    objects.Game.stage = stage;
-    objects.Game.currentScene = config.Scene.START;
+    managers.Game.stage = stage;
+    managers.Game.currentScene = config.Scene.START;
     currentState = config.Scene.START;
 
     keyboardManager = new managers.Keyboard();
-    objects.Game.keyboardManager = keyboardManager;
+    managers.Game.keyboardManager = keyboardManager;
     Main();
   }
 
   function Update():void {
     // if the scene that is playing returns another current scene
     // then call Main again and switch the scene
-    if(currentState!= objects.Game.currentScene) {
+    if(currentState!= managers.Game.currentScene) {
       Main();
     }
 
@@ -70,7 +70,7 @@
   function Main():void {
     stage.removeAllChildren();
 
-    switch(objects.Game.currentScene) {
+    switch(managers.Game.currentScene) {
       case config.Scene.START:
         currentScene = new scenes.StartScene(assetManager);
       break;
@@ -82,7 +82,7 @@
       break;
     }
 
-    currentState = objects.Game.currentScene;
+    currentState = managers.Game.currentScene;
     stage.addChild(currentScene);
   }
 

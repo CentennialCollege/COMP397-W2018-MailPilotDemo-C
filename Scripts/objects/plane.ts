@@ -37,11 +37,11 @@ module objects {
      // this.x = objects.Game.stage.mouseX;
 
      // keyboard controls
-     if(objects.Game.keyboardManager.moveLeft) {
+     if(managers.Game.keyboardManager.moveLeft) {
        this.x -= 5;
      }
 
-     if(objects.Game.keyboardManager.moveRight) {
+     if(managers.Game.keyboardManager.moveRight) {
        this.x += 5;
      }
 

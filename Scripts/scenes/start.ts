@@ -27,7 +27,7 @@ module scenes {
 
       this._ocean = new objects.Ocean();
 
-      this._welcomeLabel = new objects.Label("Mail Pilot", "60px", "Consolas", "#FFFF00", 320, 240, true);
+      this._welcomeLabel = new objects.Label("Mail Pilot", "60px", "Dock51", "#FFFF00", 320, 240, true);
       this._startButton = new objects.Button("startButton", 320, 340);
       this.Main();
     }

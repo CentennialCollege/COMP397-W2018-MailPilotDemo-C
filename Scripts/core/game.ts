@@ -52,6 +52,7 @@
 
     keyboardManager = new managers.Keyboard();
     managers.Game.keyboardManager = keyboardManager;
+    managers.Game.assetManager = assetManager;
     Main();
   }
 
@@ -72,13 +73,13 @@
 
     switch(managers.Game.currentScene) {
       case config.Scene.START:
-        currentScene = new scenes.StartScene(assetManager);
+        currentScene = new scenes.StartScene();
       break;
       case config.Scene.PLAY:
-        currentScene = new scenes.PlayScene(assetManager);
+        currentScene = new scenes.PlayScene();
       break;
       case config.Scene.OVER:
-        currentScene = new scenes.OverScene(assetManager);
+        currentScene = new scenes.OverScene();
       break;
     }
 

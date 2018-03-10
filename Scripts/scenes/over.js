@@ -14,8 +14,8 @@ var scenes;
         __extends(OverScene, _super);
         // Public Properties
         // Constructor
-        function OverScene(assetManager) {
-            var _this = _super.call(this, assetManager) || this;
+        function OverScene() {
+            var _this = _super.call(this) || this;
             _this.Start();
             return _this;
         }

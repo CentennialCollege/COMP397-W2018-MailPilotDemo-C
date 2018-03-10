@@ -14,8 +14,8 @@ var scenes;
         __extends(PlayScene, _super);
         // Public Properties
         // Constructor
-        function PlayScene(assetManager) {
-            var _this = _super.call(this, assetManager) || this;
+        function PlayScene() {
+            var _this = _super.call(this) || this;
             _this.Start();
             return _this;
         }

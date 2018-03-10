@@ -8,8 +8,8 @@ module scenes {
     // Public Properties
 
     // Constructor
-    constructor(assetManager: createjs.LoadQueue) {
-      super(assetManager);
+    constructor() {
+      super();
 
       this.Start();
     }

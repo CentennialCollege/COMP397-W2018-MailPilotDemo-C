@@ -13,9 +13,9 @@ var objects;
     var Scene = /** @class */ (function (_super) {
         __extends(Scene, _super);
         // Constructor
-        function Scene(assetManager) {
+        function Scene() {
             var _this = _super.call(this) || this;
-            _this.assetManager = assetManager;
+            _this.assetManager = managers.Game.assetManager;
             return _this;
         }
         // Private Methods

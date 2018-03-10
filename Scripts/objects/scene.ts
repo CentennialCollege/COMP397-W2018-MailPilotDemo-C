@@ -1,15 +1,15 @@
 module objects {
-  export class Scene extends createjs.Container {
+  export abstract class Scene extends createjs.Container {
     // Instance Variables
 
     // Public Properties
     public assetManager;
 
     // Constructor
-    constructor(assetManager: createjs.LoadQueue) {
+    constructor() {
       super();
 
-      this.assetManager = assetManager;
+      this.assetManager = managers.Game.assetManager;
     }
     // Private Methods
 
